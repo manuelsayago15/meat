@@ -16,7 +16,12 @@ export default new Vuex.Store({
   	display1: 'display',
   	display2: 'hide',
   	display3: 'hide',
-  	display4: 'hide'
+  	display4: 'hide',
+  	categoryColor: 'category-color',
+  	categoryColor2: 'no-color-text',
+  	categoryColor3: 'no-color-text',
+  	categoryColor4: 'no-color-text',
+  	noDisabled: ''
   },
   mutations: {
   	loadArticles(state, articles) {
@@ -40,6 +45,11 @@ export default new Vuex.Store({
   		state.display2 = 'hide';
   		state.display3 = 'hide';
   		state.display4 = 'hide';
+  		
+  		state.categoryColor = 'category-color';
+		state.categoryColor2 = 'no-color-text';
+		state.categoryColor3 = 'no-color-text';
+		state.categoryColor4 = 'no-color-text';
   		console.log(state.display1);
   	},
 
@@ -48,6 +58,12 @@ export default new Vuex.Store({
   		state.display2 = 'display';
   		state.display3 = 'hide';
   		state.display4 = 'hide';
+  		
+  		//color binding
+  		state.categoryColor = 'no-color-text';
+		state.categoryColor2 = 'category-color';
+		state.categoryColor3 = 'no-color-text';
+		state.categoryColor4 = 'no-color-text';
   		console.log(state.display2);
   	},
 
@@ -56,6 +72,12 @@ export default new Vuex.Store({
   		state.display2 = 'hide';
   		state.display3 = 'display';
   		state.display4 = 'hide';
+  		
+  		//color binding
+  		state.categoryColor = 'no-color-text';
+		state.categoryColor2 = 'no-color-text';
+		state.categoryColor3 = 'category-color';
+		state.categoryColor4 = 'no-color-text';
   		console.log(state.display3);
   	},
 
@@ -64,8 +86,23 @@ export default new Vuex.Store({
   		state.display2 = 'hide';
   		state.display3 = 'hide';
   		state.display4 = 'display';
+  		
+  		//color binding
+  		state.categoryColor = 'no-color-text';
+		state.categoryColor2 = 'no-color-text';
+		state.categoryColor3 = 'no-color-text';
+		state.categoryColor4 = 'category-color';
   		console.log(state.display4);
   	},
+
+  	setDisabled(state, value) {
+  		console.log(value);
+  		if (value === true) {
+  			state.noDisabled = 'no-disabled-button';
+  		} else {
+  			state.noDisabled = ''
+  		}
+  	}
   },
   actions: {
   	

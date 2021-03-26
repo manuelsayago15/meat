@@ -35,7 +35,7 @@
 					        </div>
 					        <div class="col-md-4">
 					        	<label for="phone">Teléfono</label>
-					            <input class="form-control" v-model="phone" @blur="phoneValidation, formValidation()" id="phone">
+					            <input class="form-control" ref="phone" v-model="phone" @blur="phoneValidation($refs.phone), formValidation()" id="phone">
 					            <div v-if="isPhoneValid === false">
 					            	<p class="error">Ingrese su teléfono</p>
 					            </div>

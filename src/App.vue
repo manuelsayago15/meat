@@ -9,4 +9,6 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Open+Sans&display=swap');
 </style>
